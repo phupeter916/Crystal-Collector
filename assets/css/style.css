@@ -1,0 +1,57 @@
+body {
+    background-color: lightblue;
+    margin-top: 10px;
+    margin-left: 30px;
+    
+}
+
+h1 {
+    color: blue;
+}
+
+.title {
+    background-color: orange;   
+    margin-bottom: 10px;
+    height: 80px;
+    text-align: center;
+}
+
+.instructions {
+    background-color: tan;
+    margin-bottom: 10px;
+    color: darkgreen;
+    height: 320px;
+
+
+}
+
+.random {
+
+    background-color: green;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    height: 100px;
+
+}
+
+.score {
+    background-color: teal;
+    margin-bottom: 10px;
+}
+
+.image {
+    background-color: yellow;
+    margin-bottom: 10px;
+    height: 90px;
+}
+
+.scoretext {
+    background-color: darkgreen;
+    margin-bottom: 10px;
+    height: 50px;
+}
+
+.totalscore {
+    background-color: darkgreen;
+    height: 100px;
+}
