@@ -14,6 +14,9 @@ h1 {
     margin-bottom: 10px;
     height: 80px;
     text-align: center;
+    
+    
+    
 }
 
 .instructions {
@@ -39,19 +42,64 @@ h1 {
     margin-bottom: 10px;
 }
 
-.image {
-    background-color: yellow;
+.image1 {
+    background-color: white;
     margin-bottom: 10px;
+    margin-right: 5px;
     height: 90px;
+    
+}
+
+.image2 {
+    background-color: white;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    
+}
+
+.image3 {
+    background-color: white;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    
+}
+
+.image4 {
+    background-color: white;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    
 }
 
 .scoretext {
     background-color: darkgreen;
     margin-bottom: 10px;
     height: 50px;
+    color: white;
 }
 
 .totalscore {
     background-color: darkgreen;
     height: 100px;
+    color: white;
+}
+
+.imagepic1 {
+    width: 95px;
+    height: 85px;
+}
+
+.imagepic2 {
+    width: 95px;
+    height: 85px;
+}
+
+.imagepic3 {
+    width: 95px;
+    height: 85px;
+}
+
+.imagepic4 {
+    width: 95px;
+    height: 85px;
 }
