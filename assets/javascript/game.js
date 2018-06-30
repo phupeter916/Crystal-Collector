@@ -8,20 +8,22 @@ var totalscore = 0;
 $(document).ready(function() {
 
         var resetNumber = function(){
-        targetNumber = Math.floor(Math.random() * 30) + 20;
-        console.log(targetNumber);
-        $(".random").text(targetNumber);
+            targetNumber = Math.floor(Math.random() * 30) + 20;
+            console.log(targetNumber);
+            $(".random").text(targetNumber);
     }
-
-        //var resetCrystals = function(){
+        var resetCrystals = function(){
+            random1 = Math.floor(Math.random() * 14) + 1;
+            random2 = Math.floor(Math.random() * 14) + 1;
+            random3 = Math.floor(Math.random() * 14) + 1;
+            random4 = Math.floor(Math.random() * 14) + 1;
             
-            //Math.floor(Math.random() * 14) + 1;
 
-        //}
 
+        }
 
  //Generates random target number and displays it on the page
-  var targetNumber = Math.floor(Math.random() * 30) + 20;
+  var targetNumber = Math.floor(Math.random() * 10) + 1;
 
   console.log(targetNumber);
   $(".random").text(targetNumber);
@@ -31,7 +33,7 @@ $(document).ready(function() {
 
             //Generates random number for crytal 1
             random1 = Math.floor(Math.random() * 14) + 1;
-            console.log(random1);
+            console.log(random1 + "test");
             //On click function
             $(".image1").on("click", function() {
 
@@ -39,15 +41,22 @@ $(document).ready(function() {
 
             alert("New score: " + counter);
 
-                if (random1 === targetNumber) {
+                if (counter === targetNumber) {
                 alert("You win!");
                 wins++;
+                resetNumber();
+                counter = 0;
+                resetCrystals();   
+                
                 }
 
                 
-                else if (random1 >= targetNumber) {
+                else if (counter >= targetNumber) {
                 alert("You lose!!");
                 losses++;
+                resetNumber();
+                counter = 0;
+                resetCrystals();  
                 }
 
                 $("#wins").text(wins);
@@ -71,13 +80,19 @@ $(document).ready(function() {
     
                     if (counter === targetNumber) {
                     alert("You win!");
-                    wins++
+                    wins++;
+                    resetNumber();
+                    counter = 0;
+                    resetCrystals();
                     }
     
                     
                     else if (counter >= targetNumber) {
                     alert("You lose!!");
-                    losses++
+                    losses++;
+                    resetNumber();
+                    counter = 0;
+                    resetCrystals();
                     }
     
                     $("#wins").text(wins);
@@ -98,13 +113,19 @@ $(document).ready(function() {
         
                         if (counter === targetNumber) {
                         alert("You win!");
-                        wins++
+                        wins++;
+                        resetNumber();
+                        counter = 0;
+                        resetCrystals();
                         }
         
                         
                         else if (counter >= targetNumber) {
                         alert("You lose!!");
-                        losses++
+                        losses++;
+                        resetNumber();
+                        counter = 0;
+                        resetCrystals();
                         }
         
                         $("#wins").text(wins);
@@ -126,13 +147,18 @@ $(document).ready(function() {
             
                             if (counter === targetNumber) {
                             alert("You win!");
-                            wins++
+                            wins++;
+                            resetNumber();
+                            counter = 0;
+                            resetCrystals();
                             }
             
                             
                             else if (counter >= targetNumber) {
                             alert("You lose!!");
-                            losses++
+                            losses++;
+                            resetNumber();
+                            counter = 0;
                             }
             
                             $("#wins").text(wins);
