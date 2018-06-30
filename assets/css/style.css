@@ -9,6 +9,10 @@ h1 {
     color: blue;
 }
 
+.random {
+    font-size: 50px;
+}
+
 .title {
     background-color: orange;   
     margin-bottom: 10px;
@@ -102,4 +106,8 @@ h1 {
 .imagepic4 {
     width: 95px;
     height: 85px;
+}
+
+#total {
+    font-size: 50px;
 }

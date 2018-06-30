@@ -1,7 +1,3 @@
-
-
-
-
 var wins = 0;
 var losses = 0;
 var totalscore = 0;
@@ -9,78 +5,148 @@ var totalscore = 0;
 
 
 
-
-
 $(document).ready(function() {
 
- 
-  var targetNumber = Math.floor(Math.random() * 100) + 1;
+        var resetNumber = function(){
+        targetNumber = Math.floor(Math.random() * 30) + 20;
+        console.log(targetNumber);
+        $(".random").text(targetNumber);
+    }
 
+        //var resetCrystals = function(){
+            
+            //Math.floor(Math.random() * 14) + 1;
+
+        //}
+
+
+ //Generates random target number and displays it on the page
+  var targetNumber = Math.floor(Math.random() * 30) + 20;
+
+  console.log(targetNumber);
   $(".random").text(targetNumber);
 
-  var counter = 0;
+            //counter variable
+            var counter = 0;
 
-  
-  
+            //Generates random number for crytal 1
+            random1 = Math.floor(Math.random() * 14) + 1;
+            console.log(random1);
+            //On click function
+            $(".image1").on("click", function() {
 
-    //Onclick Function
-
-            var numberOptions = [1, 3, 5, 8, 10, 11];
-            var increment = numberOptions[Math.round(Math.random())];
-
-            $(".imagepic1").on("click", function() {
-
-            counter += increment;
+            counter += random1;
 
             alert("New score: " + counter);
 
-                if (counter === targetNumber) {
+                if (random1 === targetNumber) {
                 alert("You win!");
-                wins++
+                wins++;
                 }
 
                 
-                else if (counter >= targetNumber) {
+                else if (random1 >= targetNumber) {
                 alert("You lose!!");
-                losses++
+                losses++;
                 }
 
-                document.getElementById("wins").innerHTML = wins;
-                document.getElementById("losses").innerHTML = losses;
-                document.getElementById("total").innerHTML = counter;
+                $("#wins").text(wins);
+                $("#losses").text(losses);
+                $("#total").text(counter);
+                
+
+
+
             });
+            //Generates random number for crytal 2
+            var random2 = Math.floor(Math.random() * 14) + 1;
+            console.log(random2);
+            //On click function
+            $(".image2").on("click", function() {
 
-            //var numberOptions = [2, 6, 7, 9, 10, 12];
-            //var increment = numberOptions[Math.round(Math.random())];
+
+                counter += random2;
     
-            //$(".imagepic2").on("click", function() {
+                alert("New score: " + counter);
+    
+                    if (counter === targetNumber) {
+                    alert("You win!");
+                    wins++
+                    }
+    
+                    
+                    else if (counter >= targetNumber) {
+                    alert("You lose!!");
+                    losses++
+                    }
+    
+                    $("#wins").text(wins);
+                    $("#losses").text(losses);
+                    $("#total").text(counter);
+                    
+                    
+                });
+                //Generates random number for crytal 3
+                var random3 = Math.floor(Math.random() * 14) + 1;
+                console.log(random3);
+                //On click function
+                $(".image3").on("click", function() {
 
-            //counter += increment;
+                    counter += random3;
+        
+                    alert("New score: " + counter);
+        
+                        if (counter === targetNumber) {
+                        alert("You win!");
+                        wins++
+                        }
+        
+                        
+                        else if (counter >= targetNumber) {
+                        alert("You lose!!");
+                        losses++
+                        }
+        
+                        $("#wins").text(wins);
+                        $("#losses").text(losses);
+                        $("#total").text(counter);
+                        
 
-            //alert("New score: " + counter);
+                        
+                    });
+                    //Generates random number for crytal 4
+                    var random4= Math.floor(Math.random() * 14) + 1;
+                    console.log(random4);
+                    //On click function
+                    $(".image4").on("click", function() {
 
-                //if (counter === targetNumber) {
-                //alert("You win!");
-                //wins++
-                //}
-
-                //else if (counter >= targetNumber) {
-                //alert("You lose!!");
-                //losses++
-                //}
-            //});
+                        counter += random4;
             
-            //$(".imagepic3").on("click", function() {
-            //counter += 10;
-            //alert("YOu got it");
-            //});
+                        alert("New score: " + counter);
+            
+                            if (counter === targetNumber) {
+                            alert("You win!");
+                            wins++
+                            }
+            
+                            
+                            else if (counter >= targetNumber) {
+                            alert("You lose!!");
+                            losses++
+                            }
+            
+                            $("#wins").text(wins);
+                            $("#losses").text(losses);
+                            $("#total").text(counter);
+                        
+                           
 
 
-           // $(".imagepic4").on("click", function() {
-            //counter += 10;
-            //alert("YOu got it");
-            //});
 
+                        });
+
+                            
+                                      
 
      
 
@@ -96,5 +162,3 @@ $(document).ready(function() {
 
 
         });
-
-
