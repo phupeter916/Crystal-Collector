@@ -8,22 +8,23 @@ var totalscore = 0;
 $(document).ready(function() {
 
         var resetNumber = function(){
-            targetNumber = Math.floor(Math.random() * 30) + 20;
+            targetNumber = Math.floor(Math.random() * 60) + 20;
             console.log(targetNumber);
             $(".random").text(targetNumber);
     }
         var resetCrystals = function(){
             random1 = Math.floor(Math.random() * 14) + 1;
+            console.log(random1);
             random2 = Math.floor(Math.random() * 14) + 1;
+            console.log(random2);
             random3 = Math.floor(Math.random() * 14) + 1;
+            console.log(random3);
             random4 = Math.floor(Math.random() * 14) + 1;
-            
-
-
+            console.log(random4);
         }
 
  //Generates random target number and displays it on the page
-  var targetNumber = Math.floor(Math.random() * 10) + 1;
+  var targetNumber = Math.floor(Math.random() * 60) + 20;
 
   console.log(targetNumber);
   $(".random").text(targetNumber);
@@ -33,7 +34,7 @@ $(document).ready(function() {
 
             //Generates random number for crytal 1
             random1 = Math.floor(Math.random() * 14) + 1;
-            console.log(random1 + "test");
+            console.log(random1);
             //On click function
             $(".image1").on("click", function() {
 
@@ -47,7 +48,6 @@ $(document).ready(function() {
                 resetNumber();
                 counter = 0;
                 resetCrystals();   
-                
                 }
 
                 
@@ -67,10 +67,10 @@ $(document).ready(function() {
 
 
             });
-            //Generates random number for crytal 2
+            
             var random2 = Math.floor(Math.random() * 14) + 1;
             console.log(random2);
-            //On click function
+            
             $(".image2").on("click", function() {
 
 
@@ -99,12 +99,11 @@ $(document).ready(function() {
                     $("#losses").text(losses);
                     $("#total").text(counter);
                     
-                    
-                });
-                //Generates random number for crytal 3
+                    });
+                
                 var random3 = Math.floor(Math.random() * 14) + 1;
                 console.log(random3);
-                //On click function
+                
                 $(".image3").on("click", function() {
 
                     counter += random3;
@@ -135,10 +134,10 @@ $(document).ready(function() {
 
                         
                     });
-                    //Generates random number for crytal 4
+                    
                     var random4= Math.floor(Math.random() * 14) + 1;
                     console.log(random4);
-                    //On click function
+                    
                     $(".image4").on("click", function() {
 
                         counter += random4;
@@ -159,8 +158,9 @@ $(document).ready(function() {
                             losses++;
                             resetNumber();
                             counter = 0;
+                            resetCrystals();
                             }
-            
+                            
                             $("#wins").text(wins);
                             $("#losses").text(losses);
                             $("#total").text(counter);
